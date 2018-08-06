@@ -1,6 +1,8 @@
 # -state-machine
  traffic light 
- 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
 Se	trata	de	hacer	el	sistema	de	control	de	un	semáforo	inteligente instalado	en	un	cruce
 que	atiende	peticiones	de	peatones	en	el	propio	semáforo	y,	además,	tiene	un	detector	
 de	tráfico	en	una	calle	transversal.
@@ -12,3 +14,13 @@ directamente	a	VERDE2.	En	el	estado	VERDE2	está durante	10	segundos,	tiempo	tra
 que	se	pasa	al	estado	AMBAR.	Ahí	se	está	durante	15	segundos	antes	de	pasar	a	ROJO,	
 donde	 se	 permanece	 durante	 45	 segundos. Estando	en	VERDE2,	AMBAR	 o	 ROJO,	las	
 señales	de	peatón	y	tráfico	no	se	tienen	en	cuenta:	se	permanece	en	el	mismo	estado.
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+Para hacerla funcionar valdrá con ejecutar el codigo en un terminal y para mandarle las 
+señales SIGUSR1 y SIGUSR2 tendremos que abrir otro terminal y ejercutar el siguiente
+codigo:
+        > kill -s SIGUSR1 <PID del ejecutable>   // Para la señal SIGUSR1
+        > kill -s SIGUSR2 <PID del ejecutable>   // Para la señal SIGUSR2
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////
